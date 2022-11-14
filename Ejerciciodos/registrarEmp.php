@@ -38,10 +38,10 @@ if (isset($_POST['registerr'])) {
 }
 
 
-if($conex){
-    echo "todo bien cool";
-}else{
-  echo "todo mal";
-}
+// if($conex){
+//     echo "todo bien cool";
+// }else{
+//   echo "todo mal";
+// }
 
 ?>

@@ -16,11 +16,11 @@ if (isset($_POST['register'])) {
     
     if ($resultado) {
         ?> 
-        <h3 class="ok">¡Te has inscripto correctamente!</h3>
+        <h3 class="ok">¡Te has inscrito correctamente!</h3>
        <?php
     } else {
         ?> 
-        <h3 class="bad">¡Ups ha ocurrido un error!</h3>
+        <h3 class="bad">¡Error! al parecer ya esta citado este empleado</h3>
        <?php
   }
 }   else {
