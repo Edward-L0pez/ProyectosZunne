@@ -9,6 +9,11 @@
     <title>Departamentos</title>
 </head>
 <body>
+<?php
+
+include("registrarDep.php");
+
+?>
 <section class="card">
 <div class="card-body">
 
@@ -58,11 +63,7 @@
        </form>
     </div>
 </section>
-    <?php
-
-include("registrarDep.php");
-
-?>
+   
 
 </body>
 </html>

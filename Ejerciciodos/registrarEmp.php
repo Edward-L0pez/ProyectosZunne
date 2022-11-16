@@ -24,6 +24,7 @@ if (isset($_POST['registerr'])) {
         if ($resultado) {
 	    	?> 
 	    	<h3 class="ok">¡Te has inscripto correctamente!</h3>
+        <a  class="enmenu nobac" href="tablaEmp.php">Lista de registrados</a> 
            <?php
 	    } else {
 	    	?> 

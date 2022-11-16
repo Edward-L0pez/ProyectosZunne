@@ -354,3 +354,19 @@ color: rgb(0, 2, 121); ;
 	background-color: rgb(0, 2, 121);
 	color: #fff;
   }
+  .ok {
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	background-color: #1e6;
+	color: #fff;
+	text-decoration: none;
+}
+.bad {
+	text-align: center;
+	width: 100%;
+	padding: 12px;
+	background-color: #a22;
+	color: #fff;
+	text-decoration: none;
+}

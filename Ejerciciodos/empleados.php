@@ -10,7 +10,11 @@
     <title>Empleados</title>
 </head>
 <body>
+<?php
 
+include("registrarEmp.php");
+
+?>
 <section class="card">
  
 <div class="card-body">
@@ -22,19 +26,19 @@
     <h1 class="card text-center">Registrar Empleados</h1>
    
     <div class="card-body">
-    <input class="form-control" type="number" name="cedula" placeholder="Escribe tu cedula">
+    <input class="form-control" type="number" name="cedula" placeholder="Escribe tu cedula" value="<?php if(isset($cedula)) echo $cedula ?>">
     </div>
     <div class="card-body">
-    <input class="form-control"  type="tel" name="telefono" placeholder="Escribe tu número teléfonico">
+    <input class="form-control"  type="tel" name="telefono" placeholder="Escribe tu número teléfonico" value="<?php if(isset($numero)) echo $numero ?>">
     </div>
     <div class="card-body">
-    <input class="form-control" type="text" name="nombre" placeholder="Escribe tu(s) nombre(s)">
+    <input class="form-control" type="text" name="nombre" placeholder="Escribe tu(s) nombre(s)" value="<?php if(isset($nombre)) echo $nombre ?>">
     </div>
     <div class="card-body">
-    <input class="form-control" type="text" name="apellidoP" placeholder="Escribe tu apellido paterno">
+    <input class="form-control" type="text" name="apellidoP" placeholder="Escribe tu apellido paterno" value="<?php if(isset($apellidoP)) echo $apellidoP ?>">
     </div>
     <div class="card-body">
-    <input class="form-control" type="text" name="apellidoM" placeholder="Escribe tu apellido materno">
+    <input class="form-control" type="text" name="apellidoM" placeholder="Escribe tu apellido materno" value="<?php if(isset($apellidoM)) echo $apellidoM ?>">
     </div>
     <!-- div class="card-body">
     <select class="form-select form-control form-select-sm" aria-label=".form-select-sm example" name="num_depto">
@@ -63,11 +67,7 @@
 
 </div>
 </section>
-<?php
 
-include("registrarEmp.php");
-
-?>
 
 <footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

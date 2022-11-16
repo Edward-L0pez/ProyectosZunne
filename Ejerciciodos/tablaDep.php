@@ -26,6 +26,7 @@
                     <th>Cédula</td>
                     <th>Teléfono</td>
                     <th>Cedula del Empleado</th>
+                    <th>Funciones</th>
                    
                 </tr>
                 </thead>
@@ -37,7 +38,7 @@
                
 
                 while ($row = mysqli_fetch_array($query2)) {
-                    $cedula = $row['num_depto'];
+                    $num_depto= $row['num_depto'];
                     $telefono = $row['nom_depto'];
                     $idced = $row['cedula_emp'];
                     
@@ -45,10 +46,15 @@
  <tbody>
                             
                     <tr>
-                        <td> <?php echo $cedula ?> </th>
+                        <td> <?php echo $num_depto ?> </th>
                         <td> <?php echo $telefono ?> </th>
                         <td> <?php echo $idced ?> </td>
-                        
+                        <td>
+                    <div>
+                     <a class="ok" href="editarDep.php?num_depto=<?php echo $num_depto ?>">Editar</a>
+                     <a class="bad" href="eliminarDep.php?num_depto=<?php echo $num_depto ?>">Eliminar</a>
+                    </div>
+                </td>
                     </tr>
                 <?php } ?>
                 </tbody>

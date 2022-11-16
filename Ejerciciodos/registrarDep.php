@@ -17,6 +17,7 @@ if (isset($_POST['register'])) {
     if ($resultado) {
         ?> 
         <h3 class="ok">¡Te has inscrito correctamente!</h3>
+        <a  class="enmenu nobac" href="tablaDep.php">Lista de registrados</a> 
        <?php
     } else {
         ?> 
