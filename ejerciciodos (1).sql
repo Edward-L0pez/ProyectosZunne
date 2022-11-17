@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-11-2022 a las 04:18:41
+-- Tiempo de generación: 17-11-2022 a las 01:54:10
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -39,7 +39,8 @@ CREATE TABLE `departamento` (
 
 INSERT INTO `departamento` (`nom_depto`, `cedula_emp`, `num_depto`) VALUES
 ('Cocina', 68790, 1),
-('Contabilidad', 2, 2);
+('jardin', 679854, 3),
+('cocina', 45767, 4);
 
 -- --------------------------------------------------------
 
@@ -60,8 +61,10 @@ CREATE TABLE `empleado` (
 --
 
 INSERT INTO `empleado` (`cedula`, `telefono`, `nombre`, `apellidoP`, `apellidoM`) VALUES
-(2, '9841235698', 'Ariam Isabella', 'López', 'Zapata'),
-(68790, '9831259352', 'Edward', 'López', 'Zapata');
+(45767, '9838094258', 'Abril', 'Zapata', 'Cherrez'),
+(68790, '9831259352', 'Edward', 'López', 'Zapata'),
+(232527, '9841235698', 'Ariam Isabella', 'López', 'Zapata'),
+(679854, '9831324039', 'Fernando', 'López', 'Haas');
 
 --
 -- Índices para tablas volcadas
@@ -88,7 +91,7 @@ ALTER TABLE `empleado`
 -- AUTO_INCREMENT de la tabla `departamento`
 --
 ALTER TABLE `departamento`
-  MODIFY `num_depto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3456790;
+  MODIFY `num_depto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2147483648;
 
 --
 -- Restricciones para tablas volcadas
