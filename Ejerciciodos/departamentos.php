@@ -31,7 +31,7 @@ include("registrarDep.php");
 </div>
 
 <div class="card-body">
-<input class="form-control" type="text" name="nombre" placeholder="Escribe el título del Depa" >
+<input class="form-control" type="text" name="nombre" placeholder="Escribe el título del Depa" value="<?php if(isset($nombre)) echo $nombre?>" >
 </div>
 
 <div class="card-body">

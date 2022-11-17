@@ -29,7 +29,7 @@ include("registrarEmp.php");
     <input class="form-control" type="number" name="cedula" placeholder="Escribe tu cedula" value="<?php if(isset($cedula)) echo $cedula ?>">
     </div>
     <div class="card-body">
-    <input class="form-control" type="tel" name="telefono" placeholder="Escribe tu número teléfonico" value="<?php if(isset($numero)) echo $numero ?>">
+    <input class="form-control" type="number"  name="telefono" placeholder="Escribe tu número teléfonico" value="<?php if(isset($numero)) echo $numero ?>">
     </div>
     <div class="card-body">
     <input class="form-control" type="text" name="nombre" placeholder="Escribe tu(s) nombre(s)" value="<?php if(isset($nombre)) echo $nombre ?>">

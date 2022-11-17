@@ -39,7 +39,7 @@ while ($fila = mysqli_fetch_assoc($resultado)){;
 </div>
 
 <div class="card-body">
-<input class="form-control" type="text" value="<?php echo $fila['nom_depto'] ?>"  name="nombre" placeholder="Escribe el título del Depa"value="<?php if(isset($nombre)) echo $nombre?>">
+<input class="form-control" type="text" value="<?php echo $fila['nom_depto'] ?>"  name="nombre" placeholder="Escribe el título del Depa" value="<?php if(isset($nombre)) echo $nombre?>">
 </div>
 
 <div class="card-body">
