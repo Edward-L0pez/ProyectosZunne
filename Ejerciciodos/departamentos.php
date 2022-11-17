@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,16 +27,16 @@ include("registrarDep.php");
     <form method="post">
     <h1 class="card text-center" >Registrar Departamentos</h1>
 <div class="card-body">
-<input class="form-control" type="text" name="num_depto" placeholder="Escribe el id del Depa">
+<input class="form-control" type="text" name="num_depto" placeholder="Escribe el id del Depa" value="<?php if(isset($id)) echo $id ?>">
 </div>
 
 <div class="card-body">
-<input class="form-control" type="text" name="nombre" placeholder="Escribe el título del Depa">
+<input class="form-control" type="text" name="nombre" placeholder="Escribe el título del Depa" >
 </div>
 
 <div class="card-body">
-    <select class="form-select form-control form-select-sm" aria-label=".form-select-sm example" name="cedula_emp">
-                    <option  selected value="">--Seleccione--</option>
+<select class="form-select form-control form-select-sm" aria-label=".form-select-sm example" name="cedula_emp">
+                    <option  selected value=" value="" > --SELECCIONA UNA--</option>
                     <?php 
                     include("con_db.php");
                     $sql="SELECT * FROM empleado";
@@ -44,16 +47,23 @@ include("registrarDep.php");
                         $nombre = $row['nombre'];
                         $apellidoP = $row['apellidoP'];
                         $apellidoM = $row['apellidoM'];
-                        
-                       
-    
                         $nombreComplet0 = $nombre . " " . $apellidoP . " " . $apellidoM;
+
+                    if(isset($_POST['nombre']) && $_POST['cedula']==$id){ ?>
+                     
+                     <option  value="<?php echo $id ?> " > <?php echo $nombreComplet0 ." - " . $id ?> </option>
+                   <?php
+                    } else {
+    
+                       
+                       
     
                         
                      ?>
-                     <option  value="<?php echo $id ?> " > <?php echo $nombreComplet0 ?> </option>
+                     <option  value="<?php echo $id ?> " > <?php echo $nombreComplet0 ." - " . $id ?> </option>
 
-                     <?php } ?>
+                     <?php } } ?>
+
     </select>
     </div>
     

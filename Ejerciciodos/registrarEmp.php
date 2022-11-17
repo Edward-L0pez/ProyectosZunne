@@ -18,7 +18,7 @@ if (isset($_POST['registerr'])) {
         // $num_depto = trim($_POST['num_depto']);
         
 
-	    $consulta = "INSERT INTO empleado(cedula, telefono, nombre, apellidoP, apellidoM) VALUES  ('$cedula','$telefono','$nombre', '$apellidoP', '$apellidoM')";
+	    $consulta = "INSERT INTO `empleado`(cedula, telefono, nombre, apellidoP, apellidoM) VALUES  ('$cedula','$telefono','$nombre', '$apellidoP', '$apellidoM')";
 	    $resultado = mysqli_query($conex,$consulta);
 	  
         if ($resultado) {

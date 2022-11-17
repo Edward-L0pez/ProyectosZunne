@@ -35,16 +35,16 @@ while ($fila = mysqli_fetch_assoc($resultado)){;
     <form method="post" >
     <h1 class="card text-center" >Registrar Departamentos</h1>
 <div class="card-body">
-<input class="form-control" type="text" value="<?php echo $fila['num_depto'] ?>" name="num_depto" placeholder="Escribe el id del Depa">
+<input class="form-control" type="text" value="<?php echo $fila['num_depto'] ?>" name="num_depto" placeholder="Escribe el id del Depa" value="<?php if(isset($id)) echo $id ?>">
 </div>
 
 <div class="card-body">
-<input class="form-control" type="text" value="<?php echo $fila['nom_depto'] ?>"  name="nombre" placeholder="Escribe el título del Depa">
+<input class="form-control" type="text" value="<?php echo $fila['nom_depto'] ?>"  name="nombre" placeholder="Escribe el título del Depa"value="<?php if(isset($nombre)) echo $nombre?>">
 </div>
 
 <div class="card-body">
     <select class="form-select form-control form-select-sm" aria-label=".form-select-sm example" name="cedula_emp">
-                    <option  selected value=" value="<?php echo $fila['cedula_emp'] ?>" > <?php echo $fila['cedula_emp'] ?></option>
+    <option  selected value=" value="" > --SELECCIONA UNA--</option>
                     <?php 
                     include("con_db.php");
                     $sql="SELECT * FROM empleado";
@@ -55,16 +55,22 @@ while ($fila = mysqli_fetch_assoc($resultado)){;
                         $nombre = $row['nombre'];
                         $apellidoP = $row['apellidoP'];
                         $apellidoM = $row['apellidoM'];
-                        
-                       
-    
                         $nombreComplet0 = $nombre . " " . $apellidoP . " " . $apellidoM;
+
+                    if(isset($_POST['nombre']) && $_POST['cedula']==$id){ ?>
+                     
+                     <option  value="<?php echo $id ?> " > <?php echo $nombreComplet0 ." - " . $id ?> </option>
+                   <?php
+                    } else {
+    
+                       
+                       
     
                         
                      ?>
                      <option  value="<?php echo $id ?> " > <?php echo $nombreComplet0 ." - " . $id ?> </option>
 
-                     <?php } ?>
+                     <?php } } ?>
 
     </select>
     </div>

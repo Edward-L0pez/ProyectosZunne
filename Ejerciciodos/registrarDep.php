@@ -6,9 +6,9 @@ if (isset($_POST['register'])) {
     && strlen($_POST['num_depto']) >= 1 
     && strlen($_POST['cedula_emp']) >= 1 ){
 
-    $nombre = trim($_POST['nombre']);
-    $id = trim($_POST['num_depto']);
-    $cedula = trim($_POST['cedula_emp']);
+        $nombre = $_POST['nombre'];
+        $id = $_POST['num_depto'];
+        $cedula = $_POST['cedula_emp'];
 
     $consulta = "INSERT INTO departamento(nom_depto, num_depto, cedula_emp) VALUES ('$nombre','$id', '$cedula')";
     $resultado = mysqli_query($conex,$consulta);
