@@ -3,7 +3,7 @@
   
 <?php
     include("con_db.php");
-
+    if(isset($_GET['cedula'])){
 $cedula =$_GET['cedula'];
 
 $sql = "DELETE FROM `empleado` WHERE cedula =".$cedula;
@@ -17,10 +17,10 @@ if($resultado) {
     <h3 class="ok">¡Eliminado!</h3>
     <br>
   
-    <a  class="enmenu nobac" href="tablaEmp.php">Lista de registrados</a> 
+    <a  class="enmenu" href="tablaEmp.php">Lista de registrados</a> 
 
    <?php
-   header("location:tablaEmp.php");
+ 
 } else {
     ?>
    <h3 class="bad">¡Ups ha ocurrido un error!</h3>
@@ -28,6 +28,6 @@ if($resultado) {
  <?php   
  } 
 
-
+    }
 ?>
 

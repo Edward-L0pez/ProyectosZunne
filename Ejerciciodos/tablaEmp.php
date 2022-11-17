@@ -66,7 +66,10 @@
                        </div>
                 </td>
                     </tr>
-                <?php }  ?>
+                <?php } 
+                
+                include("eliminarEmp.php");
+                ?>
                 
                 </tbody>
             </table>

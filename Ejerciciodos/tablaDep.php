@@ -56,7 +56,11 @@
                     </div>
                 </td>
                     </tr>
-                <?php } ?>
+                <?php } 
+                
+                include("eliminarDep.php");
+
+                ?>
                 </tbody>
             </table>
 
