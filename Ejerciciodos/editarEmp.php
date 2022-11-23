@@ -112,6 +112,7 @@ if (isset($_POST['actualizar'])) {
             <a  class="enmenu nobac" href="tablaEmp.php">Lista de registrados</a> 
     
            <?php
+        //  header("Location:tablaEmp.php");
 	    } else {
 	    	?> 
 	    	<h3 class="bad">¡Ups ha ocurrido un error!</h3>

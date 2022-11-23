@@ -11,6 +11,9 @@
 </head>
 
 <body>
+
+
+
 <div class="container">
 
     <div class="card shadow p-3 mb-5 bg-body rounded">
@@ -25,7 +28,9 @@
                 <tr>
                     <th>Cédula</td>
                     <th>Teléfono</td>
-                    <th>Nombre Completo</td>
+                    <th>Nombre(s)</td>
+                    <th>Apellido Materno</th>
+                    <th>Apellido Paterno</th>
                     <th>Funciones</th>
                     
 
@@ -49,7 +54,7 @@
                     
                    
 
-                    $nombreComplet0 = $nombre . " " . $apellidoP . " " . $apellidoM;
+                   
 
                     
                 ?>
@@ -58,12 +63,15 @@
                     <tr>
                         <td> <?php echo $cedula ?> </th>
                         <td> <?php echo $telefono ?> </th>
-                        <td> <?php echo $nombreComplet0 ?> </th>
+                        <td> <?php echo $nombre ?> </th>
+                        <td> <?php echo $apellidoP ?></td>
+                        <td> <?php echo $apellidoM ?></td>
                         <td>
                     <div>
                      <a class="ok" href="editarEmp.php?cedula=<?php echo $cedula ?>">Editar</a>
                      <a class="bad" href="eliminarEmp.php?cedula=<?php echo $cedula ?>">Eliminar</a>
                        </div>
+                       <br>
                 </td>
                     </tr>
                 <?php } 
@@ -78,6 +86,27 @@
         </div>
     </div>
 
+    <?php
+            if (isset($_GET['mensaje']) and $_GET['mensaje'] == 'errorcedula') {
+            ?>
+                <div class="bad " role="alert">
+                    Error! El numero de departamento que ingreso ya esta registrada.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php
+            }
+            ?>
+
+<?php
+            if (isset($_GET['mensaje']) and $_GET['mensaje'] == 'eliminado') {
+            ?>
+                <div class=" bad " role="alert">
+                   Eliminado! Se elimino correctamente.
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            <?php
+            }
+            ?>
 
     <footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

@@ -13,17 +13,22 @@ $sql = "DELETE FROM `empleado` WHERE cedula =".$cedula;
  
 
 if($resultado) {
+    
+    header('Location: tablaEmp.php?mensaje=eliminado');
+    
      ?>
-    <h3 class="ok">¡Eliminado!</h3>
-    <br>
+    
+    header('Location: tablaEmp.php?mensaje=eliminado');
+    
   
-    <a  class="enmenu" href="tablaEmp.php">Lista de registrados</a> 
+    <!--<a  class="enmenu" href="tablaEmp.php">Lista de registrados</a> -->
 
    <?php
  
 } else {
+    header('Location: tablaEmp.php?mensaje=errorcedula');
     ?>
-   <h3 class="bad">¡Ups ha ocurrido un error!</h3>
+   <h3 class="bad">¡Esta citado!, primero elimina el departamento</h3>
  
  <?php   
  } 

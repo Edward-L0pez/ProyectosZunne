@@ -32,6 +32,15 @@
             <a  class="enmenu" href="tablaEmp.php">Lista de Registrados</a> 
             </div>
         </div>
+        <div class="nobac">
+            <h2 class="card-header">Tablas Unidas</h2>
+            <div class="container nobac">
+                <br>
+            <a  class="enmenu" href="tablaUnida.php">Tablas Combinadas</a> 
+            
+            <a  class="enmenu" href="tablaBuscador.php">Tabla Tabla con Filtrado</a> 
+            </div>
+        </div>
 
 </section>
 </div>

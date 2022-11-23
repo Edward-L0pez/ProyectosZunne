@@ -44,7 +44,7 @@ while ($fila = mysqli_fetch_assoc($resultado)){;
 
 <div class="card-body">
     <select class="form-select form-control form-select-sm" aria-label=".form-select-sm example" name="cedula_emp">
-    <option  selected value=" value="" > --SELECCIONA UNA--</option>
+    <option   value="" > --SELECCIONA UNA--</option>
                     <?php 
                     include("con_db.php");
                     $sql="SELECT * FROM empleado";
@@ -59,17 +59,13 @@ while ($fila = mysqli_fetch_assoc($resultado)){;
 
                     if(isset($_POST['nombre']) && $_POST['cedula']==$id){ ?>
                      
-                     <option  value="<?php echo $id ?> " > <?php echo $nombreComplet0 ." - " . $id ?> </option>
+                     <option selected  value="<?php echo $id ?> " > <?php echo $nombreComplet0 ." - " . $id ?> </option>
                    <?php
                     } else {
     
-                       
-                       
-    
-                        
                      ?>
                      <option  value="<?php echo $id ?> " > <?php echo $nombreComplet0 ." - " . $id ?> </option>
-
+                    
                      <?php } } ?>
 
     </select>

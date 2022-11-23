@@ -23,8 +23,8 @@
             <table class="table table-hover">
             <thead class="thead-light">
                 <tr>
-                    <th>Cédula</td>
-                    <th>Teléfono</td>
+                    <th>Número departamento</td>
+                    <th>Nombre del departamento</td>
                     <th>Cedula del Empleado</th>
                     <th>Funciones</th>
                    
@@ -51,9 +51,9 @@
                         <td> <?php echo $idced ?> </td>
                         <td>
                     <div>
-                     <a class="ok" href="editarDep.php?num_depto=<?php echo $num_depto ?>">Editar</a>
-                     <a class="bad" href="eliminarDep.php?num_depto=<?php echo $num_depto ?>">Eliminar</a>
+                    <a class="bad" href="eliminarDep.php?num_depto=<?php echo $num_depto ?>">Eliminar</a>
                     </div>
+                    <br>
                 </td>
                     </tr>
                 <?php } 
