@@ -36,7 +36,7 @@ include("registrarDep.php");
 
 <div class="card-body">
 <select class="form-select form-control form-select-sm" aria-label=".form-select-sm example" name="cedula_emp">
-                    <option  selected value=" value="" > --SELECCIONA UNA--</option>
+                    <option  selected value=" " > --SELECCIONA UNA--</option>
                     <?php 
                     include("con_db.php");
                     $sql="SELECT * FROM empleado";

@@ -12,9 +12,6 @@
 <body>
 
 
-
-
-
 <div class="card-body">
     <input type="text" class=" nobac form-control card-header centrar" style="width:20rem; height: 5rem" id="search" placeholder="Agrupar por...">
     </div>

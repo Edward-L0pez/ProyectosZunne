@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-11-2022 a las 01:54:10
+-- Tiempo de generación: 24-11-2022 a las 04:52:38
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -39,8 +39,8 @@ CREATE TABLE `departamento` (
 
 INSERT INTO `departamento` (`nom_depto`, `cedula_emp`, `num_depto`) VALUES
 ('Cocina', 68790, 1),
-('jardin', 679854, 3),
-('cocina', 45767, 4);
+('jardin', 232527, 2),
+('Administracion', 221105, 3);
 
 -- --------------------------------------------------------
 
@@ -50,7 +50,7 @@ INSERT INTO `departamento` (`nom_depto`, `cedula_emp`, `num_depto`) VALUES
 
 CREATE TABLE `empleado` (
   `cedula` int(11) NOT NULL,
-  `telefono` varchar(10) NOT NULL,
+  `telefono` varchar(30) NOT NULL,
   `nombre` varchar(60) NOT NULL,
   `apellidoP` varchar(30) NOT NULL,
   `apellidoM` varchar(30) NOT NULL
@@ -61,10 +61,9 @@ CREATE TABLE `empleado` (
 --
 
 INSERT INTO `empleado` (`cedula`, `telefono`, `nombre`, `apellidoP`, `apellidoM`) VALUES
-(45767, '9838094258', 'Abril', 'Zapata', 'Cherrez'),
-(68790, '9831259352', 'Edward', 'López', 'Zapata'),
-(232527, '9841235698', 'Ariam Isabella', 'López', 'Zapata'),
-(679854, '9831324039', 'Fernando', 'López', 'Haas');
+(68790, '9831259352', 'Edward Aldayr', 'López', 'Zapata'),
+(221105, '9831149568', 'Marta Alejandra', 'Chavez', 'Santos'),
+(232527, '9841235698', 'Ariam Isabella', 'López', 'Zapata');
 
 --
 -- Índices para tablas volcadas

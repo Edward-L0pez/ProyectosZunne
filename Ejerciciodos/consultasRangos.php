@@ -70,7 +70,7 @@ $result = mysqli_query($conex, $sql);
 
 if ($row = mysqli_fetch_array($result)){
 ?>
-"<table class="table table-hover" >
+<table class="table table-hover" >
     
 <thead class="thead-light">
 <?php
